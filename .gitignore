@@ -1,2 +1,13 @@
+.ipynb_checkpoints
 *.npy
 *.dat
+*.pyc
+# not to be uploaded
+data/
+tmp/
+esp/
+# not to be published (under construction)
+prc_iris/
+simulation_ecg/
+simulation_eeg/
+simulation_emg/
