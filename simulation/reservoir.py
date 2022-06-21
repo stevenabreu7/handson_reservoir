@@ -2,7 +2,8 @@ import numpy as np
 
 
 class Reservoir:
-    def __init__(self, n_inputs, n_neurons, rhow=1.25, inp_scaling=1., leak_range=(0.1,0.3)):
+    def __init__(self, n_inputs, n_neurons, rhow=1.25, inp_scaling=1., leak_range=(0.1,0.3),
+                 verbose=False):
         self.n_inputs = n_inputs
         self.n_neurons = n_neurons
         self.rhow = rhow
@@ -18,7 +19,8 @@ class Reservoir:
         # set spectral radius
         rhow_current = self.spectral_radius
         self.w = self.w * rhow / rhow_current
-        print(f'spectral radius: {self.spectral_radius:.3f}')
+        if verbose:
+            print(f'spectral radius: {self.spectral_radius:.3f}')
 
 
     @property
